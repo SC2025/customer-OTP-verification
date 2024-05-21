@@ -1,253 +1,118 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <style> 
-   
-    .name{
-            background-color: rgb(0, 0, 0);
-            height: 100px;
-            width: 100%;
-            
-border-radius: 50%;
-border: 3px solid rgb(255, 3, 3);
-font-size: 40PX;
-text-align: center;
-align-items: center;
-justify-content: center;
-display: flex;
-color: aliceblue;
-
-        }
-        .underwere,.banel{
-            display: flex;
-        }
-        .table-sample{
-            background-color: rgb(207, 189, 189);
-            height: 70vh;
-            width: 100%;
-            border: 3px solid;
-            margin: 5px;
-        }
-        img{
-            height: 40vh;
-            width: 100%;
-        }
-        *{
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            font-size: 17PX;
-            font-weight: 1000;
-       
-
-        }
-
-
-        tr,td,table{
-            border: 2px solid;
-            background-color: #fffbfb;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            margin: 4px;
-            color: rgb(31, 20, 252);
-        }
-        body{
-            background-color: rgb(0, 0, 0);
-        }
-        .table{
-            margin: 4px;
-            border: 2px solid;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        }
-
-    </style>-->
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .table-sample{
-            background-color: rgb(201, 201, 222);
-            border: 3px solid;
-            display: flex;
-        }
-.product-name{
-    border: 2px solid;
-    padding: 3px;
-    margin: 3px;
-    background-color: black;
-color: beige;
-font-size: large;
-    }
-
-    .button-product-code{
-        background-color: rgb(0, 0, 0);
-        border: 2px solid;
-    padding: 3px;
-    margin: 3px;
-    color: aliceblue;
-   
-    }
-    .table{
-        border: 1px solid;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    }
-    tr,th,td{
-        border: 1px solid;
-        padding: 2px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahyadri Collection</title>
+<style>
+    #all{
+        padding:10%;
+        height: 100%;
+        width: 100%;
+        border: 2px solid black;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: aquamarine;
+        font-size: 19px;
         font: bold;
-        font-weight: 1000;
+     
     }
-    button{
-        background-color: rgb(61, 255, 255);
-        font-weight: 1000;
-        padding: 4px;
-        margin-top: 10px;
+    #all>div{
+        padding: 1%;
     }
-        </style>
+    #otp,#branch_code{
+opacity: 0;
+font-size: 0PX;
+    }
+#customer_mob_no{
+    padding: 1%;
+    font: bold;
+}
+#imp_mob{
+    background-color: rgb(231, 208, 160);
+    border: 2px solid black;
+    border-radius: 10%;
+}
+#customer_send_otp_no{
+    background-color: black;
+    font-weight: 1000;
+    color: aliceblue;
+    border: 4px solid white;
+    padding: 3px;
+}
+*{
+    font-weight: 1000;
+}
+</style>
 </head>
+
+
+
 <body>
-    
-        <div class="header">
-        <div class="name"> सह्याद्री कलेक्शन</div>
+    <div id="all">
+        <div>
+
         </div>
 
+        <div class="name">सह्याद्री  कलेक्शन रहिमतपूर</div>
+        <div>OTP - customer verification code </div>
+        <div id="imp_mob">
+            <p>-10 Digit whatsapp customer no-</p>
+<input id="customer_mob_no" type="number">
+</div>
+<div>
+<button id="customer_send_otp_no">send OTP</button>
+</div>
+</div>
 
-
-<div class="underwere">
- 
-    <div class="table-sample"> <img src="H1.jpg" alt="">
-        
-        <div class="table">
-           <div class="product-name">Steel hangers</div>
-            <button class="button-product-code">product code-H1</button>
-        <table>
-            <tr>
-                <td>1 Pieces</td>
-            <td>9 RS</td>
-            </tr>
-        </table>
-        <a href="https://sm-2025.github.io/m-pay/"><button id="link1" onclick="red()">click to order</button>
-        </a>       
-     </div>
-    
-    </div>
-
-
-
-    <div class="table-sample"> <img src="H2.jpg" alt="">
-        
-        <div class="table">
-           <div class="product-name">plastic hangers</div>
-            <button class="button-product-code">product code-H2</button>
-        <table>
-            <tr>
-                <td>1 Pieces</td>
-            <td>7 RS</td>
-            </tr>
-        </table>
-        <a href="https://sm-2025.github.io/m-pay/"><button id="link1" onclick="red()">click to order</button>
-        </a>       
-     </div>
-    
-    </div>
-
-
-
-
-    <div class="table-sample"> <img src="H3.jpg" alt="">
-        
-        <div class="table">
-           <div class="product-name">Plastic Cloth Clips</div>
-            <button class="button-product-code">product code-H3</button>
-        <table>
-            <tr>
-                <td>1 Pieces</td>
-            <td>3 RS</td>
-            </tr>
-        </table>
-        <a href="https://sm-2025.github.io/m-pay/"><button id="link1" onclick="red()">click to order</button>
-        </a>       
-     </div>
-    
-    </div>
-
-
-
-
-    <div class="table-sample"> <img src="H4.jpg" alt="">
-        
-        <div class="table">
-           <div class="product-name">Napkins</div>
-            <button class="button-product-code">product code-H4</button>
-        <table>
-            <tr>
-                <td>1 Pieces</td>
-            <td>15 RS</td>
-            </tr>
-        </table>
-        <a href="https://sm-2025.github.io/m-pay/"><button id="link1" onclick="red()">click to order</button>
-        </a>       
-     </div>
-    
-    </div>
-
-
-
-
-
-
-    <div class="table-sample"> <img src="H5.jpg" alt="">
-        
-        <div class="table">
-           <div class="product-name">Napkins</div>
-            <button class="button-product-code">product code-H5</button>
-        <table>
-            <tr>
-                <td>1 Pieces</td>
-            <td>18 RS</td>
-            </tr>
-        </table>
-        <a href="https://sm-2025.github.io/m-pay/"><button id="link1" onclick="red()">click to order</button>
-        </a>       
-     </div>
-    
-    </div>
-    </div>
-
-
-
-
+<p id="otp"></p>
+<p id="branch_code"></p>
 <script>
-    // var linkbtn = document.getElementById("link");
+    var a = prompt("enter name");
+ 
+console.log(a)
 
-    // linkbtn.addEventListener("click",function () {
-    //     linkbtn.style.backgroundColor = "red";
-        
-    // })
-//     let name = prompt("enter your name");
+if (a == "SC02") {
+    document.getElementById("branch_code").innerHTML = " ORDER FOEM - Branch - Rahimatpur (SC02)"
 
-// alert(name + ", welcome in सह्याद्री कलेक्शन.\n" +   new Date)
+} else {
+    window.location.reload()
+}
 
-    // function red() {
 
-    //     document.getElementById('link1').style.backgroundColor='red';
-    //     document.getElementById('link2').style.backgroundColor='red';    
-    //     document.getElementById('link3').style.backgroundColor='red';    
-    //     document.getElementById('link4').style.backgroundColor='red';   
-     
-    // }
 
+document.getElementById("otp").innerHTML = `OTP= सह्याद्री-कलेक्शन-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}`;
+var customer_mob_no = document.getElementById("customer_mob_no");
+var customer_send_otp_no = document.getElementById("customer_send_otp_no");
+
+customer_send_otp_no.addEventListener("click",function () {
+    if (customer_mob_no.value === "") {
+    alert("please enter customer mob no")
+}else if(customer_mob_no.value.length != 10){
+    alert(`enter 10 digit mob no you enter ${customer_mob_no.value.length} digit`)
+}
+
+
+
+ else {  
+
+    var url = `https://wa.me/91${customer_mob_no.value}?text=`
+    +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" + "%0a"+ "%0a"
+    +document.getElementById("otp").innerHTML + "%0a"+ "%0a"
+    + document.getElementById("branch_code").innerHTML+ "%0a"+ "%0a"
+    +"date = " + new Date
+    window.open(url, '_blank').focus();
+}
+})
+   
 </script>
+
+
+
+
+
 </body>
 </html>
