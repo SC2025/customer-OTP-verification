@@ -144,7 +144,7 @@ alert("are you confirm" + customer_mob_no.value + "is order done")
     var url = `https://wa.me/91${customer_mob_no.value}?text=`
     +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" + "%0a"+ "%0a"
     + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
-    +"*date=" +new Date+"*"+ %0a"+ "%0a"
+    +"*date=" +new Date+"*"+ "%0a"+"%0a"
     +"order delivery completed" + "%0a"
     window.open(url, '_blank').focus();
 }
