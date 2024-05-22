@@ -126,7 +126,7 @@ function ORDER_ID_PREE() {
     day.padStart('2', '0') : day;
     
     // Printing the present date
-    b.innerHTML = `${month}${year}${day}-D`;
+    b.innerHTML = `${month}${year}${day}-Delv`;
     
     
     } ;ORDER_ID_NEXT();
@@ -169,11 +169,11 @@ customer_send_otp_no.addEventListener("click",function () {
 
     var url = `https://wa.me/91${customer_mob_no.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
-   +"@"+customer_mob_no.value+ "%0a"+ "%0a"+ "%0a"+ "%0a"
+   +"Customer MOb.NO@"+customer_mob_no.value+ "%0a"+ "%0a"+ "%0a"+ "%0a"
     +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a"+ "%0a"+ "%0a"
 
     + document.getElementById("branch_code").innerHTML +  "%0a"+ "%0a"
-   + "track id-"+c.innerHTML+ "%0a"
+   + "track id-"+c.innerHTML+ "%0a"+ "%0a"
     +"date=" +new Date+ "%0a"
    
     window.open(url, '_blank').focus();
@@ -211,7 +211,7 @@ var url = `https://wa.me/91${customer_mob_no.value}?text=`
     +"*order delivery completed*" + "@"+customer_mob_no.value+ "%0a"+ "%0a"
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" +"%0a"+ "%0a"
     + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
-    + "track id-"+c.innerHTML+ "%0a"
+    + "track id-"+c.innerHTML+ "%0a"+ "%0a"
     +"date=" +new Date+ "%0a"+ "%0a"
 
     window.open(url, '_blank').focus();
@@ -230,31 +230,6 @@ var url = `https://wa.me/91${customer_mob_no.value}?text=`
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
