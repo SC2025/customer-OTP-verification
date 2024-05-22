@@ -104,10 +104,13 @@ customer_send_otp_no.addEventListener("click",function () {
     alert(`are you confirm ${customer_mob_no.value} is customer around you`);
 
     var url = `https://wa.me/91${customer_mob_no.value}?text=`
-    +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
-    + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
-    +"date=" +new Date+ "%0a"+ "%0a"
-    +document.getElementById("otp").innerHTML + "%0a"+ "%0a"
+    +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"
+   
+    +"*"+document.getElementById("otp").innerHTML+"*" +"*" + "%0a"+ "%0a"+ "%0a"
+
+    + document.getElementById("branch_code").innerHTML +  "%0a"+ "%0a"
+   
+    +"date=" +new Date+ "%0a"
    
     window.open(url, '_blank').focus();
 }
@@ -143,8 +146,8 @@ alert(`are you confirm ${customer_mob_no.value} is order CLOSE`)
     var url = `https://wa.me/91${customer_mob_no.value}?text=`
     +"*order delivery completed*" + "%0a"
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" +"%0a"+ "%0a"
-    + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"
-    +"date=" +new Date+ "%0a"+"%0a"
+    + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
+    +"date=" +new Date+ "%0a"
 
     window.open(url, '_blank').focus();
 }
