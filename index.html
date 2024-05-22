@@ -90,8 +90,6 @@ if (a == "SC02") {
     window.location.reload()
 }
 
-
-
 document.getElementById("otp").innerHTML = `OTP=  *सह्याद्री-कलेक्शन-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}*`;
 var customer_mob_no = document.getElementById("customer_mob_no");
 var customer_send_otp_no = document.getElementById("customer_send_otp_no");
@@ -103,6 +101,7 @@ customer_send_otp_no.addEventListener("click",function () {
     alert(`enter 10 digit mob no you enter ${customer_mob_no.value.length} digit`)
 }
  else {  
+    alert(`are you confirm ${customer_mob_no.value} is customer around you`);
 
     var url = `https://wa.me/91${customer_mob_no.value}?text=`
     +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" + "%0a"+ "%0a"
@@ -139,7 +138,7 @@ customer_ORDER_CLOSE.addEventListener("click",function () {
     alert(`enter 10 digit mob no you enter ${customer_mob_no.value.length} digit`)
 }
 else{
-alert("are you confirm" + customer_mob_no.value + "is order done")
+alert(`are you confirm ${customer_mob_no.value} is order CLOSE`)
 
     var url = `https://wa.me/91${customer_mob_no.value}?text=`
     +"order delivery completed" + "%0a"
