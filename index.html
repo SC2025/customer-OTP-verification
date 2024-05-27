@@ -20,6 +20,10 @@
         font: bold;
      
     }
+   #num{
+    font-size: 0px;
+    opacity: 0;
+   }
     #all>div{
         padding: 1%;
     }
@@ -65,7 +69,7 @@ background-color: rgb(255, 0, 0);
 
         </div>
 
-        <div class="name">सह्याद्री  कलेक्शन रहिमतपूर</div>
+        <div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC01)</div>
         <div>OTP - customer verification code </div>
         <div id="imp_mob">
             <p>Fill-10 Digit customer mobaile number on lebal-</p>
@@ -78,12 +82,14 @@ background-color: rgb(255, 0, 0);
 <button id="customer_ORDER_CLOSE">Order close</button>
 </div>
 </div>
-
+<DIV id="num">
 <p id="otp"></p>
 <p id="branch_code"></p>
 <P id="a"></P>
 <P id="b"></P>
 <P id="c"></P>
+</DIV>
+
 <script>
 //dilivery code
 var a = document.getElementById("a")
@@ -150,6 +156,7 @@ function ORDER_ID_PREE() {
 console.log(a)
 if (a == "SC02") {
     document.getElementById("branch_code").innerHTML = "Order from-Branch-Rahimatpur(SC02)"
+alert("offier you confirm @ belongs to Rahimatpur branch")
 } else {
     window.location.reload()
 }
@@ -208,7 +215,7 @@ alert(`are you confirm ${customer_mob_no.value} is order CLOSE`)
 
 var url = `https://wa.me/91${customer_mob_no.value}?text=`
     +"*order delivery completed*" + "%0a"+ "%0a"
-    + "ciustomer MOB.NO @"+customer_mob_no.value + "%0a"+ "%0a"
+    + "customer MOB.NO @"+customer_mob_no.value + "%0a"+ "%0a"
     +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" +"%0a"+ "%0a"
     + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
     + "track id-"+c.innerHTML+ "%0a"+ "%0a"
@@ -230,7 +237,6 @@ var url = `https://wa.me/91${customer_mob_no.value}?text=`
 
 </body>
 </html>
-
 
 
 
