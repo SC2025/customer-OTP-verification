@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +32,7 @@
 opacity: 0;
 font-size: 0PX;
     }
-#customer_mob_no{
+#mobno{
     padding: 1%;
     font: bold;
 }
@@ -58,6 +59,12 @@ background-color: rgb(255, 0, 0);
 *{
     font-weight: 1000;
 }
+#HED{
+    border: 2px solid black;
+    padding: 2px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
 </style>
 </head>
 
@@ -72,8 +79,10 @@ background-color: rgb(255, 0, 0);
         <div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC01)</div>
         <div>OTP - customer verification code </div>
         <div id="imp_mob">
-            <p>Fill-10 Digit customer mobaile number on lebal-</p>
-<input id="customer_mob_no" type="number">
+            <p id="HED">Fill-10 Digit customer mobaile number on lebal-</p>
+<!-- <input id="customer_mob_no" type="number"> -->
+<p id="mobnopara">whatsapp mob. no :- <input id="mobno" type="number"></p></p>
+<p >re-enter whatsapp mob. no :- <button id="mobbtn"><input id="mobnover" type="number"></button></p></button>
 </div>
 
 <div>
@@ -95,7 +104,11 @@ background-color: rgb(255, 0, 0);
 var a = document.getElementById("a")
 var b = document.getElementById("b")
 var c = document.getElementById("c")
-
+var mobno = document.getElementById("mobno");
+var mobnover = document.getElementById("mobnover");
+mobbtn.addEventListener("click",function () {
+    mobnopara.style.opacity = "0";
+})
 //id print perr
 function ORDER_ID_PREE() {
       myDate = new Date
@@ -162,21 +175,21 @@ alert("offier you confirm @ belongs to Rahimatpur branch")
 }
 
 document.getElementById("otp").innerHTML = `OTP=  सह्याद्री-कलेक्शन-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}`;
-var customer_mob_no = document.getElementById("customer_mob_no");
+var mobno = document.getElementById("mobno");
 var customer_send_otp_no = document.getElementById("customer_send_otp_no");
 
 customer_send_otp_no.addEventListener("click",function () {
-    if (customer_mob_no.value === "") {
+    if (mobno.value === "") {
     alert("please enter customer mob no")
-}else if(customer_mob_no.value.length != 10){
-    alert(`enter 10 digit mob no you enter ${customer_mob_no.value.length} digit`)
+}else if(mobno.value.length != 10){
+    alert(`enter 10 digit mob no you enter ${mobno.value.length} digit`)
 }
  else {  
-    alert(`are you confirm ${customer_mob_no.value} is customer around you`);
+    alert(`are you confirm ${mobno.value} is customer around you`);
 
-    var url = `https://wa.me/91${customer_mob_no.value}?text=`
+    var url = `https://wa.me/91${mobno.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
-   +"Customer MOb.NO@"+customer_mob_no.value+ "%0a"+ "%0a"+ "%0a"+ "%0a"
+   +"Customer MOb.NO@"+mobno.value+ "%0a"+ "%0a"+ "%0a"+ "%0a"
     +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a"+ "%0a"+ "%0a"+ "%0a"
     + document.getElementById("branch_code").innerHTML +  "%0a"+ "%0a"
    + "track id-"+c.innerHTML+ "%0a"+ "%0a"
@@ -205,17 +218,17 @@ customer_send_otp_no.addEventListener("click",function () {
 
 
 customer_ORDER_CLOSE.addEventListener("click",function () {
-    if (customer_mob_no.value === "") {
+    if (mobno.value === "") {
     alert("please enter customer mob no")
-}else if(customer_mob_no.value.length != 10){
-    alert(`enter 10 digit mob no you enter ${customer_mob_no.value.length} digit`)
+}else if(mobno.value.length != 10){
+    alert(`enter 10 digit mob no you enter ${mobno.value.length} digit`)
 }
 else{
-alert(`are you confirm ${customer_mob_no.value} is order CLOSE`)
+alert(`are you confirm ${mobno.value} is order CLOSE`)
 
-var url = `https://wa.me/91${customer_mob_no.value}?text=`
+var url = `https://wa.me/91${mobno.value}?text=`
     +"*order delivery completed*" + "%0a"+ "%0a"
-    + "customer MOB.NO @"+customer_mob_no.value + "%0a"+ "%0a"
+    + "customer MOB.NO @"+mobno.value + "%0a"+ "%0a"
     +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" +"%0a"+ "%0a"
     + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
     + "track id-"+c.innerHTML+ "%0a"+ "%0a"
@@ -237,30 +250,6 @@ var url = `https://wa.me/91${customer_mob_no.value}?text=`
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
