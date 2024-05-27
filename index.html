@@ -183,6 +183,11 @@ customer_send_otp_no.addEventListener("click",function () {
     alert("please enter customer mob no")
 }else if(mobno.value.length != 10){
     alert(`enter 10 digit mob no you enter ${mobno.value.length} digit`)
+}    else if(mobno.value != mobnover.value){
+    alert("तुमचा मोबाईल नंबर मॅच होत नाही, कृपया पेज रिलोड करा आणि माहिती पुन्हा भरा");
+mobnopara.style.opacity = "1";
+mobnopara.style.backgroundColor = "red";
+
 }
  else {  
     alert(`are you confirm ${mobno.value} is customer around you`);
@@ -250,6 +255,30 @@ var url = `https://wa.me/91${mobno.value}?text=`
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
