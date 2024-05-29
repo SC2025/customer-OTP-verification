@@ -76,7 +76,7 @@ background-color: rgb(255, 0, 0);
         <div>
 
         </div>
-
+        <p id="spece_no">oooooo</p>
         <div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC01)</div>
         <div>OTP - customer verification code </div>
         <div id="imp_mob">
@@ -110,7 +110,7 @@ var c = document.getElementById("c")
 var mobno = document.getElementById("mobno");
 var mobnover = document.getElementById("mobnover");
 var sr_no = document.getElementById("SR_NO")
-
+const str = document.getElementById("mobnover").value;
 mobbtn.addEventListener("click",function () {
     mobnopara.style.opacity = "0";
 })
@@ -184,6 +184,20 @@ var mobno = document.getElementById("mobno");
 var customer_send_otp_no = document.getElementById("customer_send_otp_no");
 
 customer_send_otp_no.addEventListener("click",function () {
+   
+    var str = document.getElementById("mobnover").value
+ var n_1 = str.slice(0,2); 
+ var n_2 = str.slice(2,4);
+ var n_3 = str.slice(4,6);
+ var n_4 = str.slice(6,8);
+ var n_5 = str.slice(8,10);
+ document.getElementById("spece_no").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
+
+
+   
+   
+   
+   
     if (mobno.value === "") {
     alert("please enter customer mob no")
 }else if(sr_no.value === ""){
@@ -197,8 +211,9 @@ mobnopara.style.opacity = "1";
 mobnopara.style.backgroundColor = "red";
 
 }
+
  else {  
-    alert(`are you confirm Sr.No-${sr_no.value} and Mob.No-${mobno.value} is customer around you`);
+    alert(`are you confirm Sr.No-${sr_no.value} and Mob.No- ${document.getElementById("spece_no").innerHTML} is customer around you`);
 
     var url = `https://wa.me/91${mobno.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
@@ -232,6 +247,23 @@ mobnopara.style.backgroundColor = "red";
 
 
 customer_ORDER_CLOSE.addEventListener("click",function () {
+  
+    var str = document.getElementById("mobnover").value
+ var n_1 = str.slice(0,2); 
+ var n_2 = str.slice(2,4);
+ var n_3 = str.slice(4,6);
+ var n_4 = str.slice(6,8);
+ var n_5 = str.slice(8,10);
+ document.getElementById("spece_no").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
+
+
+  
+  
+  
+  
+  
+  
+  
     if (mobno.value === "") {
     alert("please enter customer mob no")
 }else if(mobno.value.length != 10){
@@ -241,7 +273,7 @@ else if(sr_no.value === ""){
     alert("please enter Sr.No")
 }
 else{
-alert(`are you confirm Sr.No-${sr_no.value} and Mob.No ${mobno.value} is order CLOSE`)
+alert(`are you confirm Sr.No-${sr_no.value} and Mob.No ${document.getElementById("spece_no").innerHTML} is order CLOSE`)
 
 var url = `https://wa.me/91${mobno.value}?text=`
 +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" +"%0a"+ "%0a"
@@ -268,7 +300,6 @@ var url = `https://wa.me/91${mobno.value}?text=`
 
 </body>
 </html>
-
 
 
 
