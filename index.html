@@ -57,6 +57,10 @@ background-color: rgb(255, 0, 0);
     border: 4px solid white;
     padding: 3px;
 }
+#spece_no{
+    opacity: 0;
+    font-size: 0px;
+}
 *{
     font-weight: 1000;
 }
@@ -66,6 +70,10 @@ background-color: rgb(255, 0, 0);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
+#mobno,#mobnover,#SR_NO{
+    padding: 7px;
+    font-weight: 1000;
+}
 </style>
 </head>
 
@@ -74,7 +82,7 @@ background-color: rgb(255, 0, 0);
 <body>
     <div id="all">
         <div>
-
+         
         </div>
         <p id="spece_no">oooooo</p>
         <div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC01)</div>
@@ -213,7 +221,12 @@ mobnopara.style.backgroundColor = "red";
 }
 
  else {  
-    alert(`are you confirm Sr.No-${sr_no.value} and Mob.No- ${document.getElementById("spece_no").innerHTML} is customer around you`);
+    alert(`are you confirm 
+
+    Sr.No-${sr_no.value} & 
+    Mob.No- ${document.getElementById("spece_no").innerHTML} 
+    
+    is customer around you`);
 
     var url = `https://wa.me/91${mobno.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
@@ -273,7 +286,12 @@ else if(sr_no.value === ""){
     alert("please enter Sr.No")
 }
 else{
-alert(`are you confirm Sr.No-${sr_no.value} and Mob.No ${document.getElementById("spece_no").innerHTML} is order CLOSE`)
+alert(`are you confirm 
+
+Sr.No-${sr_no.value} & 
+Mob.No ${document.getElementById("spece_no").innerHTML} 
+
+is order CLOSE`)
 
 var url = `https://wa.me/91${mobno.value}?text=`
 +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" +"%0a"+ "%0a"
@@ -300,7 +318,6 @@ var url = `https://wa.me/91${mobno.value}?text=`
 
 </body>
 </html>
-
 
 
 
