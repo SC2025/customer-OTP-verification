@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,8 +80,10 @@ background-color: rgb(255, 0, 0);
         <div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC01)</div>
         <div>OTP - customer verification code </div>
         <div id="imp_mob">
+           <p>sr.No.-<input id="SR_NO" type="number"></p>
             <p id="HED">Fill-10 Digit customer mobaile number on lebal-</p>
-<!-- <input id="customer_mob_no" type="number"> -->
+
+            <!-- <input id="customer_mob_no" type="number"> -->
 <p id="mobnopara">whatsapp mob. no :- <input id="mobno" type="number"></p></p>
 <p >re-enter whatsapp mob. no :- <button id="mobbtn"><input id="mobnover" type="number"></button></p></button>
 </div>
@@ -106,6 +109,8 @@ var b = document.getElementById("b")
 var c = document.getElementById("c")
 var mobno = document.getElementById("mobno");
 var mobnover = document.getElementById("mobnover");
+var sr_no = document.getElementById("SR_NO")
+
 mobbtn.addEventListener("click",function () {
     mobnopara.style.opacity = "0";
 })
@@ -181,7 +186,10 @@ var customer_send_otp_no = document.getElementById("customer_send_otp_no");
 customer_send_otp_no.addEventListener("click",function () {
     if (mobno.value === "") {
     alert("please enter customer mob no")
-}else if(mobno.value.length != 10){
+}else if(sr_no.value === ""){
+    alert("please enter Sr.No")
+}
+else if(mobno.value.length != 10){
     alert(`enter 10 digit mob no you enter ${mobno.value.length} digit`)
 }    else if(mobno.value != mobnover.value){
     alert("तुमचा मोबाईल नंबर मॅच होत नाही, कृपया पेज रिलोड करा आणि माहिती पुन्हा भरा");
@@ -190,10 +198,11 @@ mobnopara.style.backgroundColor = "red";
 
 }
  else {  
-    alert(`are you confirm ${mobno.value} is customer around you`);
+    alert(`are you confirm Sr.No-${sr_no.value} and Mob.No-${mobno.value} is customer around you`);
 
     var url = `https://wa.me/91${mobno.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
+    + "*customer Sr.No- @"+sr_no.value +"*"+ "%0a"+ "%0a"
    +"Customer MOb.NO@"+mobno.value+ "%0a"+ "%0a"+ "%0a"+ "%0a"
     +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a"+ "%0a"+ "%0a"+ "%0a"
     + document.getElementById("branch_code").innerHTML +  "%0a"+ "%0a"
@@ -228,13 +237,17 @@ customer_ORDER_CLOSE.addEventListener("click",function () {
 }else if(mobno.value.length != 10){
     alert(`enter 10 digit mob no you enter ${mobno.value.length} digit`)
 }
+else if(sr_no.value === ""){
+    alert("please enter Sr.No")
+}
 else{
-alert(`are you confirm ${mobno.value} is order CLOSE`)
+alert(`are you confirm Sr.No-${sr_no.value} and Mob.No ${mobno.value} is order CLOSE`)
 
 var url = `https://wa.me/91${mobno.value}?text=`
++"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" +"%0a"+ "%0a"
     +"*order delivery completed*" + "%0a"+ "%0a"
-    + "customer MOB.NO @"+mobno.value + "%0a"+ "%0a"
-    +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" +"%0a"+ "%0a"
+    + "*customer Sr.No- @"+sr_no.value +"*"+ "%0a"+ "%0a"
+    + "customer MOB.NO @"+mobno.value+ "%0a"+ "%0a"
     + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
     + "track id-"+c.innerHTML+ "%0a"+ "%0a"
     +"date=" +new Date+ "%0a"+ "%0a"
@@ -255,28 +268,6 @@ var url = `https://wa.me/91${mobno.value}?text=`
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
