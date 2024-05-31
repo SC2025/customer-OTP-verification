@@ -104,7 +104,7 @@ background-color: rgb(255, 0, 0);
 <DIV id="PASS">
 <div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC02)</div>
 <div>OTP - customer verification code </div>
-<input type="password" name="" id="a">
+<input type="password" name="" id="PASS_a">
 <button id="firstbtn">submit</button>
 </DIV>
 
@@ -141,6 +141,7 @@ background-color: rgb(255, 0, 0);
 </div>
 <script>
 //dilivery code
+var PASS_a = document.getElementById("PASS_a")
 var a = document.getElementById("a")
 var b = document.getElementById("b")
 var c = document.getElementById("c")
@@ -159,7 +160,7 @@ function ORDER_ID_PREE() {
             hours = hours ? hours : 12; 
             var minutes = myDate.getMinutes(); 
             minutes = minutes < 10 ? '0' + minutes : minutes; 
-            var myTime =  hours + minutes + "-";
+            var myTime = "सह्याद्री-" + hours + minutes + "-"
             a.innerHTML = myTime
     } ORDER_ID_PREE()
 
@@ -191,7 +192,7 @@ function ORDER_ID_PREE() {
     
     
     } ;ORDER_ID_NEXT();
-    c.innerHTML = `सह्याद्री-${a.innerHTML + b.innerHTML}`;
+    c.innerHTML = a.innerHTML + b.innerHTML;
 
 
 
@@ -205,15 +206,13 @@ function ORDER_ID_PREE() {
 
 
 document.getElementById("firstbtn").addEventListener("click",function(){
-    console.log(a.value)
-if (a.value == "SC02") {
+    console.log(PASS_a.value)
+if (PASS_a.value == "SC02") {
     document.getElementById("branch_code").innerHTML = "Order from-Branch-Rahimatpur(SC02)"
 alert("offier you confirm @ belongs to Rahimatpur branch")
 document.getElementById("allpage").style.opacity = "1";
-a.style.opacity="0";
-document.getElementById("firstbtn").style.opacity = "0";
 document.getElementById("firstbtn").remove();
-document.getElementById("a").remove();
+document.getElementById("PASS_a").remove();
 } else {
     window.location.reload()
 }
