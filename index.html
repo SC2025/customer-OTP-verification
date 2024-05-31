@@ -159,7 +159,7 @@ function ORDER_ID_PREE() {
             hours = hours ? hours : 12; 
             var minutes = myDate.getMinutes(); 
             minutes = minutes < 10 ? '0' + minutes : minutes; 
-            var myTime = "सह्याद्री-" + hours + minutes + "-"
+            var myTime =  hours + minutes + "-";
             a.innerHTML = myTime
     } ORDER_ID_PREE()
 
@@ -191,7 +191,7 @@ function ORDER_ID_PREE() {
     
     
     } ;ORDER_ID_NEXT();
-    c.innerHTML = a.innerHTML + b.innerHTML;
+    c.innerHTML = `सह्याद्री-${a.innerHTML + b.innerHTML}`;
 
 
 
@@ -359,4 +359,3 @@ var url = `https://wa.me/91${mobno.value}?text=`
 
 </body>
 </html>
-
