@@ -211,7 +211,9 @@ if (a.value == "SC02") {
 alert("offier you confirm @ belongs to Rahimatpur branch")
 document.getElementById("allpage").style.opacity = "1";
 a.style.opacity="0";
-document.getElementById("firstbtn").style.opacity = "0"
+document.getElementById("firstbtn").style.opacity = "0";
+document.getElementById("firstbtn").remove();
+document.getElementById("a").remove();
 } else {
     window.location.reload()
 }
@@ -265,8 +267,8 @@ mobnopara.style.backgroundColor = "red";
     var url = `https://wa.me/91${mobno.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
    +"Customer MOb.NO@"+ document.getElementById("spece_no").innerHTML+ "%0a"+ "%0a"+ "%0a"+ "%0a"
-    +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a"+ 
-    + "customer Sr.No- @"+sr_no.value + "%0a"+ "%0a"+"%0a"+ "%0a"
+    +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a" 
+    + "customer SR.NO@"+ sr_no.value + "%0a"+ "%0a"+"%0a"+ "%0a"
     + document.getElementById("branch_code").innerHTML +  "%0a"+ "%0a"
    + "track id-"+c.innerHTML+ "%0a"+ "%0a"
     +"date=" +new Date+ "%0a"
@@ -357,5 +359,4 @@ var url = `https://wa.me/91${mobno.value}?text=`
 
 </body>
 </html>
-
 
