@@ -22,6 +22,9 @@
         font: bold;
      
     }
+    #allpage{
+        opacity: 0;
+    }
    #num{
     font-size: 0px;
     opacity: 0;
@@ -74,19 +77,43 @@ background-color: rgb(255, 0, 0);
     padding: 7px;
     font-weight: 1000;
 }
+#PASS{
+    background-color: rgb(116, 215, 215);
+    border: 2PX SOLID black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    font-size: larger;
+  
+}
+#firstbtn{
+    background-color: rgb(255, 0, 0);
+    color: aliceblue;
+}
+
 </style>
 </head>
 
 
 
 <body>
+</div>
+<DIV id="PASS">
+<div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC02)</div>
+<div>OTP - customer verification code </div>
+<input type="password" name="" id="a">
+<button id="firstbtn">submit</button>
+</DIV>
+
+
+    <div id="allpage">
     <div id="all">
         <div>
          
         </div>
         <p id="spece_no">oooooo</p>
-        <div class="name">सह्याद्री  कलेक्शन रहिमतपूर (SC01)</div>
-        <div>OTP - customer verification code </div>
+      
         <div id="imp_mob">
            <p>sr.No.-<input id="SR_NO" type="number"></p>
             <p id="HED">Fill-10 Digit customer mobaile number on lebal-</p>
@@ -109,7 +136,7 @@ background-color: rgb(255, 0, 0);
 <P id="b"></P>
 <P id="c"></P>
 </DIV>
-
+</div>
 <script>
 //dilivery code
 var a = document.getElementById("a")
@@ -175,17 +202,22 @@ function ORDER_ID_PREE() {
 
 
 
-
-
-    var a = prompt("enter name");
- 
-console.log(a)
-if (a == "SC02") {
+document.getElementById("firstbtn").addEventListener("click",function(){
+    console.log(a.value)
+if (a.value == "SC02") {
     document.getElementById("branch_code").innerHTML = "Order from-Branch-Rahimatpur(SC02)"
 alert("offier you confirm @ belongs to Rahimatpur branch")
+document.getElementById("allpage").style.opacity = "1";
+a.style.opacity="0";
+document.getElementById("firstbtn").style.opacity = "0"
 } else {
     window.location.reload()
 }
+})
+
+  
+ 
+
 
 document.getElementById("otp").innerHTML = `OTP=  सह्याद्री-कलेक्शन-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}`;
 var mobno = document.getElementById("mobno");
@@ -318,6 +350,5 @@ var url = `https://wa.me/91${mobno.value}?text=`
 
 </body>
 </html>
-
 
 
