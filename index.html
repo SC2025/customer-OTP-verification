@@ -264,9 +264,9 @@ mobnopara.style.backgroundColor = "red";
 
     var url = `https://wa.me/91${mobno.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
-    + "*customer Sr.No- @"+sr_no.value +"*"+ "%0a"+ "%0a"
-   +"Customer MOb.NO@"+mobno.value+ "%0a"+ "%0a"+ "%0a"+ "%0a"
-    +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a"+ "%0a"+ "%0a"+ "%0a"
+   +"Customer MOb.NO@"+ document.getElementById("spece_no").innerHTML+ "%0a"+ "%0a"+ "%0a"+ "%0a"
+    +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a"+ 
+    + "customer Sr.No- @"+sr_no.value + "%0a"+ "%0a"+"%0a"+ "%0a"
     + document.getElementById("branch_code").innerHTML +  "%0a"+ "%0a"
    + "track id-"+c.innerHTML+ "%0a"+ "%0a"
     +"date=" +new Date+ "%0a"
@@ -309,16 +309,21 @@ customer_ORDER_CLOSE.addEventListener("click",function () {
   
   
   
-  
-  
-    if (mobno.value === "") {
+     
+ if (mobno.value === "") {
     alert("please enter customer mob no")
-}else if(mobno.value.length != 10){
-    alert(`enter 10 digit mob no you enter ${mobno.value.length} digit`)
-}
-else if(sr_no.value === ""){
+}else if(sr_no.value === ""){
     alert("please enter Sr.No")
 }
+else if(mobno.value.length != 10){
+    alert(`enter 10 digit mob no you enter ${mobno.value.length} digit`)
+}    else if(mobno.value != mobnover.value){
+    alert("तुमचा मोबाईल नंबर मॅच होत नाही, कृपया पेज रिलोड करा आणि माहिती पुन्हा भरा");
+mobnopara.style.opacity = "1";
+mobnopara.style.backgroundColor = "red";
+
+}
+
 else{
 alert(`are you confirm 
 
@@ -330,8 +335,8 @@ is order CLOSE`)
 var url = `https://wa.me/91${mobno.value}?text=`
 +"*सह्याद्री-कलेक्शन(SC)रहिमतपूर*" +"%0a"+ "%0a"
     +"*order delivery completed*" + "%0a"+ "%0a"
+    + "customer MOB.NO @"+ document.getElementById("spece_no").innerHTML+ "%0a"+ "%0a"
     + "*customer Sr.No- @"+sr_no.value +"*"+ "%0a"+ "%0a"
-    + "customer MOB.NO @"+mobno.value+ "%0a"+ "%0a"
     + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
     + "track id-"+c.innerHTML+ "%0a"+ "%0a"
     +"date=" +new Date+ "%0a"+ "%0a"
