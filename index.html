@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +89,10 @@ background-color: rgb(255, 0, 0);
     background-color: rgb(255, 0, 0);
     color: aliceblue;
 }
+input{
+   height: 30px;
+   font-size: 28px;
+}
 
 </style>
 </head>
@@ -154,13 +154,13 @@ mobbtn.addEventListener("click",function () {
 })
 //id print perr
 function ORDER_ID_PREE() {
-      myDate = new Date
+    myDate = new Date
             var hours = myDate.getHours(); 
-            hours = hours % 12; 
-            hours = hours ? hours : 12; 
+            hours = hours % 24; 
+            hours = hours ? hours : 24; 
             var minutes = myDate.getMinutes(); 
             minutes = minutes < 10 ? '0' + minutes : minutes; 
-            var myTime = "सह्याद्री-" + hours + minutes + "-"
+            var myTime = "सह्याद्री-" + minutes + hours + "-"
             a.innerHTML = myTime
     } ORDER_ID_PREE()
 
@@ -169,8 +169,8 @@ function ORDER_ID_PREE() {
     //id print next
     function ORDER_ID_NEXT(){
     
-    // Creating the date instance
-    let d = new Date();
+       // Creating the date instance
+       let d = new Date();
     
     // Adding one date to the present date
     d.setDate(d.getDate() );
@@ -186,9 +186,13 @@ function ORDER_ID_PREE() {
     
     day = day.length == 1 ?
     day.padStart('2', '0') : day;
-    
+        //PRINTING TODAY DATE
+        today_date = `${day}.${month}.${year}`;
     // Printing the present date
-    b.innerHTML = `${month}${year}${day}-Delv`;
+    b.innerHTML  = `${month}${year}${day}-DELV`;
+  
+    
+
     
     
     } ;ORDER_ID_NEXT();
@@ -340,7 +344,7 @@ var url = `https://wa.me/91${mobno.value}?text=`
     + "*customer Sr.No- @"+sr_no.value +"*"+ "%0a"+ "%0a"
     + "*"+document.getElementById("branch_code").innerHTML + "*"+ "%0a"+ "%0a"
     + "track id-"+c.innerHTML+ "%0a"+ "%0a"
-    +"date=" +new Date+ "%0a"+ "%0a"
+    +"date=" + today_date + "%0a"+ "%0a"
 
     window.open(url, '_blank').focus();
 }
