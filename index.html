@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -226,12 +230,15 @@ document.getElementById("PASS_a").remove();
  
 
 
-document.getElementById("otp").innerHTML = `OTP=  सह्याद्री-कलेक्शन-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}`;
-var mobno = document.getElementById("mobno");
-var customer_send_otp_no = document.getElementById("customer_send_otp_no");
+
 
 customer_send_otp_no.addEventListener("click",function () {
    
+document.getElementById("otp").innerHTML = `OTP= सह्याद्री-कलेक्शन-SR-${sr_no.value}-${Math.floor(Math.random() * 100)}-${Math.floor(Math.random() * 100)}`;
+var mobno = document.getElementById("mobno");
+var customer_send_otp_no = document.getElementById("customer_send_otp_no");
+
+
     var str = document.getElementById("mobnover").value
  var n_1 = str.slice(0,2); 
  var n_2 = str.slice(2,4);
@@ -241,7 +248,6 @@ customer_send_otp_no.addEventListener("click",function () {
  document.getElementById("spece_no").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
 
 
-   
    
    
    
@@ -270,11 +276,11 @@ mobnopara.style.backgroundColor = "red";
     var url = `https://wa.me/91${mobno.value}?text=`
     +"सह्याद्री-कलेक्शन(SC)रहिमतपूर" + "%0a"+ "%0a"
    +"Customer MOb.NO@"+ document.getElementById("spece_no").innerHTML+ "%0a"+ "%0a"+ "%0a"+ "%0a"
-    +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a" 
-    + "customer SR.NO@"+ sr_no.value + "%0a"+ "%0a"+"%0a"+ "%0a"
-    + document.getElementById("branch_code").innerHTML +  "%0a"+ "%0a"
+   + "customer SR.NO@"+ sr_no.value + "%0a"+ "%0a"
+   +"*"+document.getElementById("otp").innerHTML+"*"+ "%0a" + "%0a" 
+    + document.getElementById("branch_code").innerHTML +  "%0a"
    + "track id-"+c.innerHTML+ "%0a"+ "%0a"
-    +"date=" +new Date+ "%0a"
+    +"date=" + today_date + "%0a"
    
     window.open(url, '_blank').focus();
 }
